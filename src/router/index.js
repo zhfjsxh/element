@@ -7,20 +7,31 @@ Vue.use(VueRouter)
 const routes = [{
         path: '/',
         name: 'Home',
-        component: Home
+        component: Home,
+        redirect: '/table',
+        children: [{
+                path: '/about',
+                name: 'About',
+                component: () =>
+                    import ('../views/About.vue')
+            },
+            {
+                path: '/edit/:id',
+                name: 'edit',
+                component: () =>
+                    import ('../views/Edit.vue')
+            },
+            {
+                path: '/table',
+                name: 'table',
+                component: () =>
+                    import ('../views/table.vue')
+            }
+        ]
     },
-    {
-        path: '/about',
-        name: 'About',
-        component: () =>
-            import ('../views/About.vue')
-    },
-    {
-        path: '/edit/:id',
-        name: 'edit',
-        component: () =>
-            import ('../views/Edit.vue')
-    }
+
+
+
 ]
 
 const router = new VueRouter({
