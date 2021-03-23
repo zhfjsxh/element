@@ -39,17 +39,10 @@
 				</el-popover>
 				</template>
 </el-table-column>
-<el-table-column label="住址0002" width="250">
-    <template slot-scope="scope">
-				<el-popover  placement="top">
-					<!-- <p>姓名: {{ scope.row.name }}</p> -->
-					<!-- <p>住址: {{ scope.row.address }}</p> -->
-					<div slot="reference" class="name-wrapper">
-					<el-tag size="medium">{{ scope.row.address }}</el-tag>
-					</div>
-				</el-popover>
-				</template>
-</el-table-column>
+
+
+
+
 <el-table-column label="操作">
     <template slot-scope="scope">
 			<el-button
