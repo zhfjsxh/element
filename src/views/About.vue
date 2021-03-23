@@ -66,7 +66,7 @@
             handleEdit(index, row) {
                 // console.log(index, row);
                 const id = row.id
-                    // console.log(id)
+                console.log(id)
 
                 this.$router.push('/edit/' + id)
             },
