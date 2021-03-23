@@ -24,7 +24,7 @@
     <el-menu-item-group>
         <!-- <template slot="title">分组一</template> -->
         <el-menu-item index="/user">用户列表</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
+        <el-menu-item index="/logbook">文章列表</el-menu-item>
     </el-menu-item-group>
     <el-menu-item-group title="">
         <el-menu-item index="2-3">选项3</el-menu-item>
