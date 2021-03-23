@@ -9,6 +9,7 @@
 			<template slot-scope="scope">
 				<i class="el-icon-time"></i>
 				<span style="margin-left: 10px">{{scope.$index + 1}}</span>
+       
 			</template>
 </el-table-column>
 <el-table-column label="日期" width="180">
@@ -63,9 +64,10 @@
     export default {
         data() {
             return {
-                tableData: []
+                tableData: [],
             }
         },
+
         methods: {
             handleEdit(index, row) {
                 // console.log(index, row);
