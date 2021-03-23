@@ -6,7 +6,7 @@
         <template slot="title"><i class="el-icon-message"></i>导航一</template>
 <el-menu-item-group>
     <!-- <template slot="title">分组一</template> -->
-    <el-menu-item index="/table">选项1</el-menu-item>
+    <el-menu-item index="/table" :class="this.$route.path == '/table' ?'is-active':'' ">选项1</el-menu-item>
     <el-menu-item index="/about">选项2</el-menu-item>
     <el-menu-item index="1-3">选项3</el-menu-item>
     <!-- <el-menu-item index="1-4-1">选项4-1</el-menu-item> -->
@@ -81,6 +81,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         data() {
             const item = {
@@ -91,6 +92,13 @@
             return {
                 tableData: Array(20).fill(item)
             }
+        },
+        mounted() {
+            console.log(this.$route.path)
+            axios.get('https://mock.mengxuegu.com/mock/60587df50d58b864da03d4e6/vuedemo/userdata').then(res => {
+                console.log(res)
+            })
+
         }
     };
 </script>
@@ -113,5 +121,9 @@
     
     .el-menu-item-group__title {
         padding: 0 !important;
+    }
+    
+    .active {
+        color: #409eff;
     }
 </style>
